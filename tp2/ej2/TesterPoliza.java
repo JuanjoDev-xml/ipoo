@@ -1,6 +1,9 @@
 import java.util.Scanner;
 public class TesterPoliza {
     public static void main(String[]args){
+        /*
+        // Inciso b
+        
         System.out.println("Ingrese num, incendio y robo:");
         Scanner scanner = new Scanner(System.in);
         int num;
@@ -17,5 +20,12 @@ public class TesterPoliza {
         p1.actualizarPorcentaje(10);
         p1.activar();
         System.out.println(p1.obtenerNroPoliza() + " " + p1.obtenerCostoPoliza() + " " + p1.estaActiva());
+        */
+        // inciso c
+        Poliza p1 = new Poliza(111);
+        p1.establecerRobo(1000);
+        p1.establecerIncendio(1200);
+        p1.actualizarPorcentaje(15);
+        System.out.println(p1.obtenerNroPoliza() + " " + p1.obtenerCostoPoliza());
     }
 }
