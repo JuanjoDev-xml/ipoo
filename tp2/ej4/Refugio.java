@@ -14,7 +14,7 @@ public class Refugio{
             alimentos = a;
             bebidas = b;
         }
-        if(c > camas){
+        if(c > cantidadCamas){
             camas = cantidadCamas;
         }
         else{
@@ -54,7 +54,7 @@ public class Refugio{
     }
     public boolean reponerAlimentos(int n){
         boolean res;
-        if (n > 0 && alimentos + n <= capacidadAlacena){
+        if (n > 0 && n <= capacidadAlacena - alimentos - bebidas){
             alimentos += n;
             res = true;
         }
@@ -65,7 +65,7 @@ public class Refugio{
     }
     public boolean reponerBebidas(int n){
         boolean res;
-        if (n > 0 && bebidas + n <= capacidadAlacena){
+        if (n > 0 && n <= capacidadAlacena - alimentos - bebidas){
             bebidas += n;
             res = true;
         }
@@ -117,8 +117,7 @@ public class Refugio{
         return r != null && r.obtenerAlimentos() == alimentos && r.obtenerBebidas() == bebidas
                          && r.obtenerCamas() == camas;
     }
-    public Refugio clone(){
-        // está bien así? ????????????????????????????????????????????????????????????
+    public Refugio clone(){ // está bien así??????????????????????????????????????
         return new Refugio(alimentos, bebidas, camas);
     }
     public String toString(){
