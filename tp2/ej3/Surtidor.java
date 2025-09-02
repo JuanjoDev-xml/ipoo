@@ -21,22 +21,22 @@ public class Surtidor{
     public void llenarDepositoPremium(){
         cantPremium = maximaCarga;
     }
-    // Requiere litros > 0
     public void extraerGasoil(int litros){
+        // Requiere litros > 0
         if (cantGasoil > litros)
             cantGasoil -= litros;
         else
             cantGasoil = 0;
     }
-    // Requiere litros > 0
     public void extraerSuper(int litros){
+        // Requiere litros > 0
         if (cantSuper > litros)
             cantSuper -= litros;
         else
             cantSuper = 0;
     }
-    // Requiere litros > 0
     public void extraerPremium(int litros){
+        // Requiere litros > 0
         if (cantPremium > litros)
             cantPremium -= litros;
         else
