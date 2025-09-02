@@ -117,7 +117,7 @@ public class Refugio{
         return r != null && r.obtenerAlimentos() == alimentos && r.obtenerBebidas() == bebidas
                          && r.obtenerCamas() == camas;
     }
-    public Refugio clone(){ // está bien así??????????????????????????????????????
+    public Refugio clone(){
         return new Refugio(alimentos, bebidas, camas);
     }
     public String toString(){
