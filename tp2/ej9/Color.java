@@ -11,18 +11,27 @@ public class Color{
     }
     // ??????????????????????????????????????????????????????????????????????????????
     public Color(int r, int a, int v){ //está mal el orden en el enunciado? => RGB = red, green, blue
-        if(r >= 0 && r <= 255 && a >= 0 && a <= 255 && v >= 0 && v <= 255 ){
-            rojo = r;
-            azul = a;
-            verde = v;
-        }
-        else{
-            rojo = 255;
-            verde = 255;
-            azul = 255;
-        }
+        rojo = determinarValor(r);
+        azul = determinarValor(a);
+        verde = determinarValor(v);
     }
     // Comandos
+
+    private int determinarValor(int v){
+        // Comando auxiliar privado para determinar el valor de cada color en constructor
+        int valor;
+        if (v >= 0 && v <= 255){
+            valor = v;
+        }
+        else{
+            if (v < 0){
+                valor = 0;
+            }
+                else valor = 255;
+        }
+        return valor;
+    }
+
     public void variar(int val){
         variarRojo(val);
         variarAzul(val);
