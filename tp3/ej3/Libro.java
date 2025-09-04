@@ -38,6 +38,6 @@ public class Libro{
         return categoria;
     }
     public String toString(){
-        return nombre + " " + autor + " " + editorial + " " + categoria;
+        return "nombre: "+ nombre+ "autor: "+autor+"editorial: "+editorial+"categoria: "+categoria;
     }
 }
