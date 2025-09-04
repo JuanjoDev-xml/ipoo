@@ -91,7 +91,7 @@ public class Criatura {
     public boolean mayorEnergia(Criatura c){
         return energia > c.obtenerEnergia(); // no hay que checkear c ligada??? creo que no
     }
-    public String toSting(){
+    public String toString(){
         return energia + " " + refugio + " " + despierto + " " + caminatas;
     }
 }
