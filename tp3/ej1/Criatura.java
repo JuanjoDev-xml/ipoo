@@ -63,7 +63,7 @@ public class Criatura {
                 res = false;
                 if(refugio.obtenerCamas() < 10){
                     refugio.ocuparCama();
-                    dormir(); // aumenta caminatas ?????????????????????????????
+                    dormir();
                 }
                 else energia = minEnergia;
             }
