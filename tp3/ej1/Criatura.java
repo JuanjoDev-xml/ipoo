@@ -56,12 +56,12 @@ public class Criatura {
     }
     public boolean caminar(){
         boolean res = true;
-        if (despierto && energia < 0) {
+        if (despierto && energia > 0) {
             energia -= consumoEnergia;
             if (caminatas < 4) caminatas++;
             else{
                 res = false;
-                if(refugio.obtenerCamas() < 20){
+                if(refugio.obtenerCamas() < 10){
                     refugio.ocuparCama();
                     dormir(); // aumenta caminatas ?????????????????????????????
                 }
