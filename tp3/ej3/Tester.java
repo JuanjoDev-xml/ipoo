@@ -18,7 +18,7 @@ public class Tester {
         System.out.println("Debería dar el de Jose");
         System.out.println(p1.masAntiguo(p2));
 
-        System.out.println("Debería dar false"); // error ?????????????? (da true)
+        System.out.println("Debería dar true");
         System.out.println(p2.estaAtrasado(today));
 
         f2.establecerDia(31);

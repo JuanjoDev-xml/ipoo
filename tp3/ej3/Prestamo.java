@@ -43,7 +43,7 @@ public class Prestamo {
         }
         return pres;
     }
-    public boolean equals(Prestamo p){ // está bien ????????????????
+    public boolean equals(Prestamo p){
         return libro == p.obtenerLibro() && socio.equals(p.obtenerSocio())
                 && fechaPrestamo.equals(p.obtenerFechaPrestamo())
                 && fechaDevolucion.equals(p.obtenerFechaDevolucion());
