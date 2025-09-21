@@ -59,7 +59,7 @@ public class Equipo {
         return 3*pG + pE;
     }
     public Equipo mejorPuntaje(Equipo e){ // Buena práctica/legible???????
-        Equipo mejor;
+        Equipo mejor = this;
         if (obtenerPuntos() > e.obtenerPuntos()) mejor = this;
         if (obtenerPuntos() < e.obtenerPuntos()) mejor = e;
         if (obtenerPuntos() == e.obtenerPuntos() && gFavor > e.obtenerGFavor()) mejor = this;
