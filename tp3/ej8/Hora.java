@@ -42,7 +42,7 @@ public class Hora {
         return res;
     }
     private boolean horaAnterior(Hora h){
-        return hor > h.obtenerHora() || (hor == h.obtenerHora() && min > h.obtenerMinutos()); 
+        return hor < h.obtenerHora() || (hor == h.obtenerHora() && min < h.obtenerMinutos()); 
     }
     public boolean anterior(Hora c){
         return c != null && horaAnterior(c); // está bien que lo checkee????????????? 
