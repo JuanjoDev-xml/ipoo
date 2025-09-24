@@ -1,4 +1,3 @@
-package ej2;
 public class SecuenciaEnteros{
     // Atributos de instancia
     private int sec[];
