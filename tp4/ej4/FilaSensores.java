@@ -11,7 +11,7 @@ public class FilaSensores {
         if (posicionValida(p)) fs[p-1] = s;
     }
     public void intercambiar(int p1, int p2){
-        if (posicionValida(p1) && posicionValida(p2)){ // Está bien?
+        if (posicionValida(p1) && posicionValida(p2)){
             Sensor aux;
             aux = fs[p1-1];
             fs[p1-1] = fs[p2-1];
@@ -34,7 +34,7 @@ public class FilaSensores {
         if (posicionValida(p)) res = obtenerSensor(p-1);
         return res;
     }
-    public boolean posicionValida(int p){ // Está bien?
+    public boolean posicionValida(int p){
         return p > 0 && p <= cantFila();
     }
     public int cantFila(){
@@ -92,9 +92,24 @@ public class FilaSensores {
         for (int i = 0; i < cantFila(); i++){
             (res.obtenerSensor(i)).establecerP1(fs[i].obtenerP1());
             (res.obtenerSensor(i)).establecerP2(fs[i].obtenerP2());
-        } 
+        }
+        return res;
     }
-    public FilaSensores filaCompleta(){
-        // a
+    public FilaSensores filaCompleta(){ // Está bien?
+        int pos = 0;
+        FilaSensores completa = new FilaSensores(cantFila());
+        // Poner los sensores en las primeras posiciones del nuevo arreglo
+        for (int i = 0; i < cantFila() && completa.cantSensores() < cantSensores(); i++){
+            if (fs[i] != null){
+                completa.establecerSensor(pos, fs[i]);
+                pos++;
+            }
+        }
+        // Rellenar el nuevo arreglo con referencias vacías
+        for (int i = pos; i < cantFila(); i++){
+            completa.establecerSensor(pos, null);
+            pos++;
+        }
+        return completa;
     }
 }
