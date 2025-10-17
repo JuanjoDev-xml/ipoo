@@ -102,10 +102,10 @@ public class SecuenciaEnteros{
         }
         return iguales;
     }
-    public SecuenciaEnteros clone(){ // está bien??????????
+    public SecuenciaEnteros clone(){
         SecuenciaEnteros res = new SecuenciaEnteros(cantElementos());
         for(int i = 0; i < cantElementos(); i++){
-            res.sec[i] = this.sec[i];
+            res.establecerEntero(i, sec[i]);
         }
         return res;
     }
