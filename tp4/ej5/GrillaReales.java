@@ -122,13 +122,13 @@ public class GrillaReales{
         }
         return es;
     }
-    public GrillaReales traspuesta(){
-        GrillaReales trasnp = new GrillaReales(cantColumnas(), cantFilas());
+    public GrillaReales transpuesta(){
+        GrillaReales transp = new GrillaReales(cantColumnas(), cantFilas());
         for (int i = 0; i < cantFilas(); i++){
             for (int j = 0; j < cantColumnas(); j++){
-                trasnp.establecerReal(j, i, grilla[i][j]);
+                transp.establecerReal(j, i, grilla[i][j]);
             }
         }
-        return trasnp;
+        return transp;
     }
 }
