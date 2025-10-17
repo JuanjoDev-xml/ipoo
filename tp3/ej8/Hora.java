@@ -15,7 +15,7 @@ public class Hora {
         min = c;
     }
     public void copy(Hora h){
-        if (h != null){  // está bien que lo checkee? no dice requiere
+        if (h != null){
             hor = h.obtenerHora();
             min = h.obtenerMinutos();
         }
@@ -32,8 +32,8 @@ public class Hora {
         return hor == c.obtenerHora() && min == c.obtenerMinutos();
     }
     public int diferenciaMinutos(Hora c){
-        int res = 0; // no aclara qué retornar si c no está ligado
-        if (c != null){ // está bien que lo checkee?????????????
+        int res = 0;
+        if (c != null){
             int minLocal = 60*hor + min;
             int minC = 60*(c.obtenerHora()) + c.obtenerMinutos();
             res = minLocal - minC;
@@ -45,6 +45,6 @@ public class Hora {
         return hor < h.obtenerHora() || (hor == h.obtenerHora() && min < h.obtenerMinutos()); 
     }
     public boolean anterior(Hora c){
-        return c != null && horaAnterior(c); // está bien que lo checkee????????????? 
+        return c != null && horaAnterior(c);
     }
 }
