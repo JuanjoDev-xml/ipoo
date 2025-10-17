@@ -10,8 +10,7 @@ public class Vehiculo {
         numero = n;
         patente = p;
     }
-    private Hora establecerIngreso(Hora i){ // está bien? no se aclara qué hacer si la hora no es válida
-        if (i.obtenerHora() < 7 || i.obtenerHora() > 22) i.establecerHora(7);
+    private Hora establecerIngreso(Hora i){
         if (i.obtenerMinutos() < 0 || i.obtenerMinutos() > 59) i.establecerMinutos(0);
         return i;
     }
@@ -52,7 +51,7 @@ public class Vehiculo {
     }
     public boolean equals(Vehiculo v){
         // Requiere v ligado, se implementa en profundidad
-        return egreso != null && v.obtenerEgreso() != null && // está bien que checkee eso, ya que no lo requiere?
+        return egreso != null && v.obtenerEgreso() != null &&
         ingreso.equals(v.obtenerIngreso()) &&
         egreso.equals(v.obtenerEgreso()) && numero == v.obtenerNumero()
         && patente == v.obtenerPatente();
