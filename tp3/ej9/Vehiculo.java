@@ -11,7 +11,7 @@ public class Vehiculo {
         numero = n;
         patente = p;
     }
-    private Hora establecerIngreso(Hora i){ // está bien? no se aclara qué hacer si la hora no es válida
+    private Hora establecerIngreso(Hora i){
         if (i.obtenerHora() < 7 || i.obtenerHora() > 22) i.establecerHora(7);
         if (i.obtenerMinutos() < 0 || i.obtenerMinutos() > 59) i.establecerMinutos(0);
         return i;
