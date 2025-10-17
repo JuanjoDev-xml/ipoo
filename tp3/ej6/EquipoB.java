@@ -54,18 +54,18 @@ public class EquipoB {
     public int obtenerPuntos(){
         return 3*pG + pE;
     }
-    public EquipoB mejorPuntaje(EquipoB e){ // Buena práctica/legible???????
+    public EquipoB mejorPuntaje(EquipoB e){
         EquipoB mejor = this;
         if (obtenerPuntos() > e.obtenerPuntos()) mejor = this;
-        if (obtenerPuntos() < e.obtenerPuntos()) mejor = e;
-        if (obtenerPuntos() == e.obtenerPuntos() && gFavor > e.obtenerGFavor()) mejor = this;
-        if (obtenerPuntos() == e.obtenerPuntos() && gFavor < e.obtenerGFavor()) mejor = e;
-        if (obtenerPuntos() == e.obtenerPuntos() && gFavor == e.obtenerGFavor() && gContra < e.obtenerGContra()) mejor = this;
-        if (obtenerPuntos() == e.obtenerPuntos() && gFavor == e.obtenerGFavor() && gContra > e.obtenerGContra()) mejor = e;
-        if (obtenerPuntos() == e.obtenerPuntos() && gFavor == e.obtenerGFavor() && gContra == e.obtenerGContra()) mejor = this;
+        else if (obtenerPuntos() < e.obtenerPuntos()) mejor = e;
+        else if (obtenerPuntos() == e.obtenerPuntos() && gFavor > e.obtenerGFavor()) mejor = this;
+        else if (obtenerPuntos() == e.obtenerPuntos() && gFavor < e.obtenerGFavor()) mejor = e;
+        else if (obtenerPuntos() == e.obtenerPuntos() && gFavor == e.obtenerGFavor() && gContra < e.obtenerGContra()) mejor = this;
+        else if (obtenerPuntos() == e.obtenerPuntos() && gFavor == e.obtenerGFavor() && gContra > e.obtenerGContra()) mejor = e;
+        else if (obtenerPuntos() == e.obtenerPuntos() && gFavor == e.obtenerGFavor() && gContra == e.obtenerGContra()) mejor = this;
         return mejor;
     }
-    public Jugador capitanConMasGoles(EquipoB e){ // está bien ???????????
+    public Jugador capitanConMasGoles(EquipoB e){
         Jugador mas;
         if (gFavor >= e.obtenerGFavor()) mas = jugador;
         else mas = e.obtenerCapitan();
