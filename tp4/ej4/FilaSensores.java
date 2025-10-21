@@ -90,8 +90,7 @@ public class FilaSensores {
         // Se implementa en profundidad
         FilaSensores res = new FilaSensores(cantFila());
         for (int i = 0; i < cantFila(); i++){
-            (res.obtenerSensor(i)).establecerP1(fs[i].obtenerP1());
-            (res.obtenerSensor(i)).establecerP2(fs[i].obtenerP2());
+            res.establecerSensor(i, obtenerSensor(i).clone());
         }
         return res;
     }
