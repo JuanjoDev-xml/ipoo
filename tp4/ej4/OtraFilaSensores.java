@@ -99,7 +99,7 @@ public class OtraFilaSensores {
         }
         return res;
     }
-    public FilaSensores filaCompleta(){ // Está bien?
+    public FilaSensores filaCompleta(){
         int pos = 0;
         FilaSensores completa = new FilaSensores(cantFila());
         // Poner los sensores en las primeras posiciones del nuevo arreglo
