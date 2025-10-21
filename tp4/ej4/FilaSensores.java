@@ -59,7 +59,7 @@ public class FilaSensores {
         // Requiere todas las referencias del array ligadas
         int cant = 0;
         boolean hay = false;
-        for (int i = 0; i < cantFila() && !false; i++){
+        for (int i = 0; i < cantFila() && !hay; i++){
             if (fs[i].riesgo()) cant++;
             if (cant >= n) hay = true;
         }
@@ -95,7 +95,7 @@ public class FilaSensores {
         }
         return res;
     }
-    public FilaSensores filaCompleta(){ // Está bien?
+    public FilaSensores filaCompleta(){
         int pos = 0;
         FilaSensores completa = new FilaSensores(cantFila());
         // Poner los sensores en las primeras posiciones del nuevo arreglo
