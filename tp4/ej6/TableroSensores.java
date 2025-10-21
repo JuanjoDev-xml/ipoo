@@ -94,9 +94,11 @@ public class TableroSensores{
     }
     public int contarCoincidencias(TableroSensores gs){
         int cantCoinci = 0;
+        int menorCantFilas = menorCant(cantFilas(), gs.cantFilas());
+        int menorCantColumnas = menorCant(cantColumnas(), gs.cantColumnas());
         if (gs != null){
-            for (int i = 0; i < menorCant(cantFilas(), gs.cantFilas()); i++){
-                for (int j = 0; j < menorCant(cantColumnas(), gs.cantColumnas()); j++){
+            for (int i = 0; i < menorCantFilas; i++){
+                for (int j = 0; j < menorCantColumnas; j++){
                     if (grilla[i][j] != null && gs.obtenerSensor(i,j) != null &&
                         grilla[i][j].equals(gs.obtenerSensor(i, j))) cantCoinci++;
                 }
