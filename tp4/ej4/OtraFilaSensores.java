@@ -60,7 +60,7 @@ public class OtraFilaSensores {
         // No requiere todas las referencias del array ligadas
         int cant = 0;
         boolean hay = false;
-        for (int i = 0; i < cantFila() && !false; i++){
+        for (int i = 0; i < cantFila() && !hay; i++){
             if (fs[i] != null && fs[i].riesgo()) cant++;
             if (cant >= n) hay = true;
         }
