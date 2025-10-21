@@ -91,10 +91,8 @@ public class OtraFilaSensores {
         // Se implementa en profundidad
         FilaSensores res = new FilaSensores(cantFila());
         for (int i = 0; i < cantFila(); i++){
-            if (fs[i] != null){
-                (res.obtenerSensor(i)).establecerP1(fs[i].obtenerP1());
-                (res.obtenerSensor(i)).establecerP2(fs[i].obtenerP2());
-            }
+            if (fs[i] != null)
+                res.establecerSensor(i, obtenerSensor(i).clone());
             else res.establecerSensor(i, null);
         }
         return res;
