@@ -4,7 +4,6 @@ public class Tester {
         Sensor s2 = new SensorAlfa(1, 2, 3, 4);
         SensorAlfa s3 = new SensorAlfa(1, 2, 3, 4);
 
-        System.out.println(" ");
         System.out.println(s1.equals(s2));
         System.out.println(s1.equals(s3));
         System.out.println(s2.equals(s1));

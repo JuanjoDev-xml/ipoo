@@ -31,4 +31,18 @@ public class SensorAlfa extends Sensor{
     public SensorAlfa clone(){
         return new SensorAlfa(p1, p2, p3, p4);
     }
+    public boolean equals(Sensor e){
+        boolean ig;
+        if (this == e)
+            ig = true;
+        else if (e == null)
+            ig = false;
+        else if(getClass() != e.getClass())
+            ig = false;
+        else {
+            SensorAlfa r = (SensorAlfa) e;
+            ig = super.equals(e) && p3 == r.obtenerP3();
+        }
+        return ig;
+    }
 }
