@@ -20,7 +20,7 @@ Una introducción a los elementos básicos del leguaje JAVA, no tiene un directo
 
 ### TP5
 
-**Herencia** entre clases. Extensibilidad y Reusabilidad. Generalización y especialización. La relación *isa*. **Polimorfismo**. Variables y asignaciones polimórficas. Chequeo de Tipos. Ligadura dinámica. Redefinición y Sobrecarga. Casting.
+**Herencia** entre clases. Extensibilidad y Reusabilidad. Generalización y especialización. La relación *esUn*. **Polimorfismo**. Variables y asignaciones polimórficas. Chequeo de Tipos. Ligadura dinámica. Redefinición y Sobrecarga. Casting.
 
 ### TP6
 
