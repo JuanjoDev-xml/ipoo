@@ -26,7 +26,7 @@ public class Coleccion{
                     pos++;
                 }
             }
-            if (encontre){ // ????????????
+            if (encontre){
                 for (int i = pos; i < cant; i++){
                     col[i] = col[i+1];
                 }
