@@ -6,8 +6,9 @@ public class NominaEmpleados extends Coleccion{
     // Consultas
     public int contarSupHoras(int h){
         int cantidad = 0;
+        Empleado e;
         for (int i = 0; i < cant; i++){
-            Empleado e = (Empleado) col[i];
+            e = (Empleado) col[i];
             if (e.obtenerCantHoras() > h)
                 cantidad++;
         }
@@ -15,8 +16,9 @@ public class NominaEmpleados extends Coleccion{
     }
     public float sumarSueldos(){
         float res = 0;
+        Empleado e;
         for (int i = 0; i < cant; i++){
-            Empleado e = (Empleado) col[i];
+            e = (Empleado) col[i];
             res += e.obtenerSueldo();
         }
         return res;
