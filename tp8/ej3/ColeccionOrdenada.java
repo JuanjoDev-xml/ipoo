@@ -70,6 +70,12 @@ public class ColeccionOrdenada {
         return esta;
     }
     public ColeccionOrdenada intercalar(ColeccionOrdenada c){
-        return this;
+        ColeccionOrdenada cole = this;
+        if (c != null){
+            for (int i = 0; i < cant + c.cantElementos(); i++){
+                cole.insertar(c.recuperarElemento(i));
+            }
+        }
+        return cole;
     }
 }
