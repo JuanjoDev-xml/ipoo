@@ -37,7 +37,7 @@ public class Conjunto {
         boolean cumple = e != null;
         int cantComp = 0;
         for (int i = 0; i < cant && cumple; i++){
-            if (co[i].complemeneto(e))
+            if (co[i].complemento(e))
                 cantComp++;
             if (cantComp > n)
                 cumple = false;
